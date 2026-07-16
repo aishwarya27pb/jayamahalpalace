@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jayamahal Palace — A Heritage Hotel | Bangalore</title>
+  <meta name="description" content="Experience Royalty in the Heart of Bangalore. Jayamahal Palace Hotel blends colonial grandeur with contemporary luxury across 19 acres of heritage grounds." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body class="page-home">
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">
+        <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Cormorant Garamond" font-size="14" fill="#c9a84c" letter-spacing="4">JAYAMAHAL</text>
+          <text x="50%" y="70%" dominant-baseline="middle" text-anchor="middle" font-family="Montserrat" font-size="6" fill="#888" letter-spacing="6">PALACE</text>
+        </svg>
+      </div>
+      <div class="preloader-bar"><div class="preloader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-text">JAYAMAHAL</span>
+      <span class="logo-sub">PALACE</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link active" data-page="home">Home</a>
+      <a href="about.html" class="nav-link" data-page="about">About</a>
+      <a href="services.html" class="nav-link" data-page="services">Services</a>
+      <a href="gallery.html" class="nav-link" data-page="gallery">Gallery</a>
+      <a href="suites.html" class="nav-link" data-page="suites">Suites</a>
+      <a href="venues.html" class="nav-link" data-page="venues">Venues</a>
+      <a href="events.html" class="nav-link" data-page="events">Events</a>
+      <a href="contact.html" class="nav-link" data-page="contact">Contact</a>
+    </div>
+    <a href="contact.html#book" class="btn-book">Book Now</a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <!-- Fullscreen Palace Video Background -->
+    <video
+      id="heroBgVideo"
+      class="hero-video"
+      src="palace-video.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+    ></video>
+    <!-- Gold particle overlay still renders on top -->
+    <canvas id="heroCanvas" class="hero-canvas-overlay"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal-up">A Heritage Hotel · Est. 1884</p>
+      <h1 class="hero-title reveal-up">
+        <span class="line">Experience</span>
+        <span class="line gradient-text">Royalty</span>
+        <span class="line">in Bangalore</span>
+      </h1>
+      <p class="hero-subtitle reveal-up">Nestled across 19 acres of heritage grounds, where colonial grandeur meets contemporary luxury.</p>
+      <div class="hero-cta reveal-up">
+        <a href="suites.html" class="btn-primary">Explore Suites</a>
+        <a href="gallery.html" class="btn-ghost">View Gallery</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Stats Strip (Moved below hero) -->
+  <section class="stats-section">
+    <div class="hero-stats">
+      <div class="stat-card">
+        <span class="stat-num" data-target="19">0</span>
+        <span class="stat-unit">Acres</span>
+        <span class="stat-label">Heritage Grounds</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" data-target="100">0</span>
+        <span class="stat-unit">+</span>
+        <span class="stat-label">Years of Legacy</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" data-target="44">0</span>
+        <span class="stat-unit">K sqft</span>
+        <span class="stat-label">Event Spaces</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Teaser -->
+  <section class="section-about-teaser" id="about-teaser">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <div class="about-img-3d" id="aboutImg3d">
+            <div class="about-img-face front" style="background-image:url('https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg')"></div>
+            <div class="about-img-face side"></div>
+            <div class="about-img-face top"></div>
+          </div>
+          <div class="about-img-badge">
+            <span class="badge-num">1884</span>
+            <span class="badge-label">Est.</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="section-eyebrow reveal-up">About Us</p>
+          <h2 class="section-title reveal-up">Discover <em>Heritage</em> &amp; Luxury, at Every Turn</h2>
+          <p class="section-body reveal-up">For over a decade, Jayamahal Palace has been Bangalore's destination for guests who refuse ordinary. Here, heritage meets modern hospitality. Every stay, every celebration, every gathering becomes a memory.</p>
+          <ul class="about-pillars reveal-up">
+            <li><span class="pillar-icon">✦</span> Legendary Spaces</li>
+            <li><span class="pillar-icon">✦</span> Flawless Execution</li>
+            <li><span class="pillar-icon">✦</span> Hospitality That Anticipates</li>
+          </ul>
+          <a href="about.html" class="btn-link reveal-up">Discover Our Story →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Showcase -->
+  <section class="section-services" id="services-home">
+    <div class="services-bg-canvas" id="servicesBgCanvas"></div>
+    <div class="container">
+      <p class="section-eyebrow text-center reveal-up">Why Choose Us</p>
+      <h2 class="section-title text-center reveal-up">Tailored Services <em>For Every Guest</em></h2>
+      <div class="services-grid">
+        <div class="service-card reveal-card" data-delay="0">
+          <div class="service-card-inner">
+            <div class="service-icon">
+              <svg viewBox="0 0 40 40"><path d="M20 4L36 14V26L20 36L4 26V14L20 4Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/><circle cx="20" cy="20" r="5" fill="#c9a84c" opacity="0.5"/></svg>
+            </div>
+            <h3>Heritage Stay</h3>
+            <p>Palace rooms and suites that blend 19th-century architecture with modern amenities for an unparalleled stay.</p>
+          </div>
+        </div>
+        <div class="service-card reveal-card" data-delay="100">
+          <div class="service-card-inner">
+            <div class="service-icon">
+              <svg viewBox="0 0 40 40"><rect x="5" y="10" width="30" height="20" rx="3" stroke="#c9a84c" stroke-width="1.5" fill="none"/><path d="M5 16H35M12 10V16M28 10V16" stroke="#c9a84c" stroke-width="1.5"/></svg>
+            </div>
+            <h3>Event Hosting</h3>
+            <p>From royal weddings to corporate galas — 44,000 sq.ft of curated event spaces await your vision.</p>
+          </div>
+        </div>
+        <div class="service-card reveal-card" data-delay="200">
+          <div class="service-card-inner">
+            <div class="service-icon">
+              <svg viewBox="0 0 40 40"><path d="M20 8 C12 8 8 14 8 20 C8 28 20 36 20 36 C20 36 32 28 32 20 C32 14 28 8 20 8Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/><circle cx="20" cy="20" r="4" fill="#c9a84c" opacity="0.6"/></svg>
+            </div>
+            <h3>Garden & Lawns</h3>
+            <p>Lush manicured gardens stretching across 19 acres — nature's backdrop for every occasion.</p>
+          </div>
+        </div>
+        <div class="service-card reveal-card" data-delay="300">
+          <div class="service-card-inner">
+            <div class="service-icon">
+              <svg viewBox="0 0 40 40"><path d="M8 32 L8 18 L20 8 L32 18 L32 32 Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/><path d="M16 32V24H24V32" stroke="#c9a84c" stroke-width="1.5"/></svg>
+            </div>
+            <h3>Venues</h3>
+            <p>Multiple indoor and outdoor venues, each offering a distinct character for weddings, conferences and product launches.</p>
+          </div>
+        </div>
+        <div class="service-card reveal-card" data-delay="400">
+          <div class="service-card-inner">
+            <div class="service-icon">
+              <svg viewBox="0 0 40 40"><circle cx="20" cy="14" r="6" stroke="#c9a84c" stroke-width="1.5" fill="none"/><path d="M8 34 C8 26 32 26 32 34" stroke="#c9a84c" stroke-width="1.5" fill="none"/></svg>
+            </div>
+            <h3>Dedicated Host</h3>
+            <p>A personal Wedding Consultant and Event Host dedicated to making your vision a flawless reality.</p>
+          </div>
+        </div>
+        <div class="service-card reveal-card" data-delay="500">
+          <div class="service-card-inner">
+            <div class="service-icon">
+              <svg viewBox="0 0 40 40"><path d="M20 6 L22 14 L30 14 L24 19 L26 28 L20 23 L14 28 L16 19 L10 14 L18 14 Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/></svg>
+            </div>
+            <h3>Luxury Dining</h3>
+            <p>Curated menus celebrating Bangalore's culinary heritage, from traditional spreads to contemporary fine dining.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Suites Teaser -->
+  <section class="section-suites-teaser" id="suites-home">
+    <div class="container">
+      <p class="section-eyebrow text-center reveal-up">Accommodations</p>
+      <h2 class="section-title text-center reveal-up">Royal Suites &amp; <em>Rooms</em></h2>
+    </div>
+    <div class="suites-3d-carousel" id="suitesCarousel">
+      <div class="suite-slide active" data-index="0">
+        <div class="suite-slide-inner">
+          <div class="suite-img" style="background-image:url('https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg')"></div>
+          <div class="suite-info">
+            <span class="suite-tag">Signature</span>
+            <h3>Heritage Suite</h3>
+            <p>An elegant retreat blending colonial architecture with modern comfort. High ceilings, period furniture and lush garden views.</p>
+            <a href="suites.html" class="btn-link">View Suite →</a>
+          </div>
+        </div>
+      </div>
+      <div class="suite-slide" data-index="1">
+        <div class="suite-slide-inner">
+          <div class="suite-img" style="background-image:url('https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg')"></div>
+          <div class="suite-info">
+            <span class="suite-tag">Deluxe</span>
+            <h3>Palace Suite</h3>
+            <p>Our most expansive accommodation — a full palace wing experience with private terrace overlooking the manicured grounds.</p>
+            <a href="suites.html" class="btn-link">View Suite →</a>
+          </div>
+        </div>
+      </div>
+      <div class="suite-slide" data-index="2">
+        <div class="suite-slide-inner">
+          <div class="suite-img" style="background-image:url('https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg')"></div>
+          <div class="suite-info">
+            <span class="suite-tag">Superior</span>
+            <h3>Garden Room</h3>
+            <p>Wake up to panoramic garden views. Thoughtfully appointed with heritage touches and contemporary amenities.</p>
+            <a href="suites.html" class="btn-link">View Suite →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn prev" id="carouselPrev">←</button>
+      <div class="carousel-dots" id="carouselDots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <button class="carousel-btn next" id="carouselNext">→</button>
+    </div>
+    <div class="text-center" style="margin-top:3rem">
+      <a href="suites.html" class="btn-primary">Explore All Suites</a>
+    </div>
+  </section>
+
+  <!-- Venues Section -->
+  <section class="section-venues" id="venues-home">
+    <div class="venues-parallax-bg"></div>
+    <div class="container">
+      <p class="section-eyebrow text-center reveal-up">Event Spaces</p>
+      <h2 class="section-title text-center reveal-up">Iconic <em>Venues</em> for Every Occasion</h2>
+      <div class="venues-grid">
+        <div class="venue-card reveal-card" data-delay="0">
+          <div class="venue-img" style="background-image:url('https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg')"></div>
+          <div class="venue-overlay">
+            <h3>Grand Ballroom</h3>
+            <p>Upto 500 guests · Indoor</p>
+            <a href="venues.html" class="btn-ghost sm">Explore</a>
+          </div>
+        </div>
+        <div class="venue-card reveal-card" data-delay="150">
+          <div class="venue-img" style="background-image:url('https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg')"></div>
+          <div class="venue-overlay">
+            <h3>Palace Lawns</h3>
+            <p>Upto 2000 guests · Outdoor</p>
+            <a href="venues.html" class="btn-ghost sm">Explore</a>
+          </div>
+        </div>
+        <div class="venue-card reveal-card" data-delay="300">
+          <div class="venue-img" style="background-image:url('https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg')"></div>
+          <div class="venue-overlay">
+            <h3>Banquet Hall</h3>
+            <p>Upto 300 guests · Indoor</p>
+            <a href="venues.html" class="btn-ghost sm">Explore</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section-testimonials" id="testimonials">
+    <div class="container">
+      <p class="section-eyebrow text-center reveal-up">Guest Stories</p>
+      <h2 class="section-title text-center reveal-up">What Our <em>Guests</em> Say</h2>
+      <div class="testimonials-track" id="testimonialsTrack">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Jayamahal Palace made our wedding day absolutely magical. The heritage setting, the impeccable service, and the lush grounds — nothing compares."</p>
+          <div class="reviewer"><span class="reviewer-name">Priya &amp; Arjun</span><span class="reviewer-event">Wedding, 2024</span></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"The perfect blend of royal elegance and modern comfort. Our corporate retreat was flawlessly executed by the Jayamahal team."</p>
+          <div class="reviewer"><span class="reviewer-name">Rakesh Mehta</span><span class="reviewer-event">Corporate Event, 2024</span></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Waking up in a heritage palace suite surrounded by 19 acres of gardens — this is what luxury truly means. Will return without a doubt."</p>
+          <div class="reviewer"><span class="reviewer-name">Meera Iyer</span><span class="reviewer-event">Heritage Stay, 2025</span></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"From the moment we arrived to departure, every detail was attended to. The product launch event exceeded all our expectations."</p>
+          <div class="reviewer"><span class="reviewer-name">Vikram Nair</span><span class="reviewer-event">Product Launch, 2025</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section-cta">
+    <div class="cta-bg"></div>
+    <div class="cta-particles" id="ctaParticles"></div>
+    <div class="container">
+      <div class="cta-content">
+        <p class="section-eyebrow text-center">Begin Your Journey</p>
+        <h2 class="section-title text-center">Ready to Experience <em>Royal Hospitality?</em></h2>
+        <p class="cta-body text-center">Whether it's a wedding, a corporate event, or a regal staycation — Jayamahal Palace awaits.</p>
+        <div class="cta-btns">
+          <a href="contact.html#book" class="btn-primary">Book Now</a>
+          <a href="tel:+918025492000" class="btn-ghost">+91 80 2549 2000</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-text">JAYAMAHAL</span>
+            <span class="logo-sub">PALACE</span>
+          </a>
+          <p class="footer-tagline">A Heritage Hotel · Bangalore</p>
+          <p class="footer-addr">1/1, Jayamahal Road, Bangalore – 560 046</p>
+          <p><a href="tel:+918025492000">+91 80 2549 2000</a></p>
+          <p><a href="mailto:reservations@jayamahalpalace.com">reservations@jayamahalpalace.com</a></p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="suites.html">Suites & Rooms</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="venues.html">Venues</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Experiences</h4>
+          <ul>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="events.html#weddings">Weddings</a></li>
+            <li><a href="events.html#corporate">Corporate</a></li>
+            <li><a href="events.html#product-launch">Product Launch</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Follow Us</h4>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/jayamahalpalace" target="_blank" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.facebook.com/jayamahalpalace" target="_blank" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+          </div>
+          <p class="footer-book-cta">Reserve Your Experience</p>
+          <a href="contact.html#book" class="btn-primary sm">Book Now</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Jayamahal Palace. All rights reserved.</p>
+        <p>Designed with ✦ for heritage lovers</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/hero3d.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
