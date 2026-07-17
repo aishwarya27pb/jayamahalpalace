@@ -75,6 +75,18 @@
 
   /* Hamburger menu — show */
   .nav-hamburger { display: flex; }
+  .nav-hamburger span {
+    background: var(--gold) !important;
+  }
+
+  /* Drawer navigation links styling override to keep visible on mobile dark drawer background */
+  .nav-links .nav-link {
+    color: rgba(240, 235, 226, 0.75) !important;
+  }
+  .nav-links .nav-link:hover,
+  .nav-links .nav-link.active {
+    color: var(--gold) !important;
+  }
 
   /* Section text */
   .section-title { font-size: clamp(1.8rem, 5vw, 2.8rem); }
@@ -138,6 +150,112 @@
   /* Parallax sections */
   .parallax-venue {
     background-attachment: scroll;
+  }
+
+  /* Force display of reveal elements on mobile/tablet */
+  .reveal-up, .reveal-card {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* Simplify About Section 3D Image on Mobile */
+  .about-img-3d {
+    height: 320px !important;
+    transform: none !important;
+    perspective: none !important;
+  }
+  .about-img-face.side,
+  .about-img-face.top {
+    display: none !important;
+  }
+  .about-img-face.front {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    transform: none !important;
+  }
+  .about-img-secondary {
+    position: absolute !important;
+    bottom: -2rem !important;
+    left: -1rem !important;
+    width: 150px !important;
+    height: 180px !important;
+    z-index: 4 !important;
+  }
+  .about-img-badge {
+    bottom: -1rem !important;
+    right: -1rem !important;
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .badge-num {
+    font-size: 1.3rem !important;
+  }
+  .badge-label {
+    font-size: 0.45rem !important;
+  }
+
+  /* Fix Landing Page Suites 3D Carousel on Mobile */
+  .suites-3d-carousel {
+    height: 480px !important;
+    perspective: none !important;
+    overflow: hidden !important;
+    margin: 2rem 0 !important;
+  }
+  .suite-slide {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 0 !important;
+    transform: translateX(100%) !important;
+    transition: transform 0.6s var(--ease-luxury), opacity 0.6s ease-in-out !important;
+    pointer-events: none !important;
+    margin: 0 !important;
+  }
+  .suite-slide.active {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    pointer-events: all !important;
+  }
+  .suite-slide.prev {
+    opacity: 0 !important;
+    transform: translateX(-100%) !important;
+  }
+  .suite-slide-inner {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    border-radius: 12px !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1) !important;
+    border: 1px solid var(--border-light) !important;
+  }
+  .suite-img {
+    height: 220px !important;
+    width: 100% !important;
+  }
+  .suite-img::after {
+    background: linear-gradient(to bottom, transparent 40%, var(--bg-2)) !important;
+  }
+  .suite-info {
+    padding: 1.5rem !important;
+    height: calc(100% - 220px) !important;
+    justify-content: flex-start !important;
+    gap: 0.5rem !important;
+  }
+  .suite-info h3 {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  .suite-info p {
+    font-size: 0.8rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0.5rem !important;
   }
 }
 
