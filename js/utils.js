@@ -117,11 +117,20 @@ function initPreloader() {
   const preloader = document.getElementById('preloader');
   if (!preloader) return;
 
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      preloader.classList.add('done');
-    }, 2200);
-  });
+  const hasSeenPreloader = sessionStorage.getItem('preloaderShown');
+  
+  if (hasSeenPreloader) {
+    preloader.style.display = 'none';
+    window.preloaderDelay = 0.1;
+  } else {
+    window.preloaderDelay = 2.2;
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        preloader.classList.add('done');
+        sessionStorage.setItem('preloaderShown', 'true');
+      }, 2200);
+    });
+  }
 }
 
 /* ---------- CTA Particle Sparks ---------- */

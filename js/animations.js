@@ -16,7 +16,8 @@
     const preloader = document.getElementById('preloader');
     if (!preloader) return;
 
-    const tl = gsap.timeline({ delay: 2.2 });
+    const delayTime = window.preloaderDelay !== undefined ? window.preloaderDelay : 2.2;
+    const tl = gsap.timeline({ delay: delayTime });
 
     // Hero lines reveal
     const heroLines = document.querySelectorAll('.hero-title .line');
