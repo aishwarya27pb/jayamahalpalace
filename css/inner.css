@@ -360,6 +360,12 @@
   flex-direction: row-reverse;
 }
 .suite-showcase-visual {
+  flex: 1.2;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
 /* ---- Modern Suite Cards ---- */
 .suite-card-modern {
   display: grid;
