@@ -578,64 +578,79 @@
 }
 
 /* ============================================================
-   VENUES SECTION
+   VENUES PARALLAX SECTION
    ============================================================ */
-.section-venues {
-  padding: var(--space-xl) 0;
-  background: var(--bg-2);
+.section-venues-parallax {
+  background: var(--bg);
   position: relative;
+  /* Extra space at bottom before testimonials */
+  padding-bottom: 4rem; 
 }
 
-.venues-parallax-bg {
+.venues-header {
+  padding: 6rem 0 4rem;
+  background: var(--bg);
+  position: relative;
+  z-index: 2;
+}
+
+.parallax-venue {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 4rem 1.5rem;
+}
+
+/* Subtle overlay to make text boxes pop more against bright images */
+.parallax-venue::before {
+  content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.04), transparent 70%);
+  background: rgba(10, 10, 11, 0.3);
   pointer-events: none;
 }
 
-.venues-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 4rem;
-}
-
-.venue-card {
+.parallax-content-box {
   position: relative;
-  height: 420px;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  cursor: pointer;
-  transform-style: preserve-3d;
+  z-index: 2;
+  background: #f5f0e6; /* cream background from screenshot */
+  color: #111;
+  padding: 3rem 2.5rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-.venue-img {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.8s var(--ease-luxury);
+.parallax-content-box h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 1.5rem;
 }
 
-.venue-card:hover .venue-img { transform: scale(1.08); }
-
-.venue-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(10,10,11,0.9) 0%, rgba(10,10,11,0.2) 60%, transparent 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 2.5rem;
-  transition: background 0.5s;
+.parallax-content-box p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 2rem;
 }
 
-.venue-card:hover .venue-overlay {
-  background: linear-gradient(to top, rgba(10,10,11,0.95) 0%, rgba(10,10,11,0.5) 70%, rgba(201,168,76,0.05) 100%);
+.parallax-content-box .btn-primary {
+  /* Override global button for light background */
+  color: var(--bg);
+  box-shadow: none;
 }
-
-.venue-overlay h3 { font-size: 1.8rem; margin-bottom: 0.25rem; }
-.venue-overlay p  { font-size: 0.75rem; color: var(--gold); letter-spacing: 0.1em; margin-bottom: 1.5rem; }
 
 /* ============================================================
    TESTIMONIALS
@@ -776,8 +791,18 @@
 
   /* Grids → single column */
   .services-grid      { grid-template-columns: 1fr; }
-  .venues-grid        { grid-template-columns: 1fr; }
   .testimonials-track { grid-template-columns: 1fr; }
+
+  /* Parallax Venues */
+  .parallax-venue {
+    background-attachment: scroll; /* Fix for iOS bug with fixed backgrounds */
+    padding: 3rem 1rem;
+    min-height: 60vh;
+  }
+  .parallax-content-box {
+    padding: 2rem 1.5rem;
+  }
+  .parallax-content-box h3 { font-size: 1.8rem; }
 
   /* Suites carousel */
   .suite-slide-inner  { grid-template-columns: 1fr; height: auto; }
