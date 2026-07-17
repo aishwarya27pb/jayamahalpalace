@@ -303,53 +303,42 @@
   gap: 20px;
 }
 .amenity-card {
-  background: #fcfcf9;
+  background: #c9a84c;
   border-radius: 8px;
   padding: 2rem 1.5rem;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
 }
 .amenity-card:hover {
   transform: translateY(-5px);
-}
-.amenity-card.highlight {
-  background: #c9a84c;
-  color: #fff;
-}
-.amenity-card.highlight h3,
-.amenity-card.highlight p {
-  color: #fff;
-}
-.amenity-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 1px solid var(--gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1.5rem auto;
-}
-.amenity-card.highlight .amenity-icon {
-  border-color: #fff;
-}
-.amenity-icon svg {
-  width: 24px;
-  height: 24px;
-  stroke: var(--gold);
-}
-.amenity-card.highlight .amenity-icon svg {
-  stroke: #fff;
+  box-shadow: 0 12px 32px rgba(201, 168, 76, 0.35);
 }
 .amenity-card h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
   font-weight: 600;
+  color: #fff;
 }
 .amenity-card p {
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
+}
+.amenity-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+}
+.amenity-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: #fff;
 }
 
 @media (max-width: 1024px) {
