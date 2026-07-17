@@ -159,41 +159,9 @@
     transition: none !important;
   }
 
-  /* Simplify About Section 3D Image on Mobile */
-  .about-img-3d {
-    height: 320px !important;
-    transform: none !important;
-    perspective: none !important;
-  }
-  .about-img-face.side,
-  .about-img-face.top {
+  /* Hide About Section Images on Mobile/Tablet */
+  .about-img-wrap {
     display: none !important;
-  }
-  .about-img-face.front {
-    position: relative !important;
-    width: 100% !important;
-    height: 100% !important;
-    transform: none !important;
-  }
-  .about-img-secondary {
-    position: absolute !important;
-    bottom: -2rem !important;
-    left: -1rem !important;
-    width: 150px !important;
-    height: 180px !important;
-    z-index: 4 !important;
-  }
-  .about-img-badge {
-    bottom: -1rem !important;
-    right: -1rem !important;
-    width: 80px !important;
-    height: 80px !important;
-  }
-  .badge-num {
-    font-size: 1.3rem !important;
-  }
-  .badge-label {
-    font-size: 0.45rem !important;
   }
 
   /* Fix Landing Page Suites 3D Carousel on Mobile */
