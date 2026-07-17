@@ -60,6 +60,11 @@
   align-items: center;
   padding: 0 1.5rem;
   max-width: 900px;
+  color: #fff; /* Force light text over dark video */
+}
+
+.hero-title {
+  color: #fff; /* Override global h1 color */
 }
 
 .hero-eyebrow {
@@ -112,6 +117,10 @@
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.hero .btn-ghost {
+  color: #f0ebe2; /* Override dark text-primary to stay readable on dark video */
 }
 
 /* Scroll Indicator */
@@ -290,6 +299,20 @@
   transform-origin: top;
 }
 
+.about-img-secondary {
+  position: absolute;
+  bottom: -4rem;
+  left: -3rem;
+  width: 220px;
+  height: 250px;
+  border-radius: var(--radius-md);
+  background-size: cover;
+  background-position: center;
+  z-index: 4;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  border: 1px solid var(--border);
+}
+
 .about-img-badge {
   position: absolute;
   bottom: -2rem;
@@ -374,37 +397,36 @@
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-top: 4rem;
 }
 
 .service-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-light);
+  background: var(--bg-card); /* Cream background */
+  border: none; /* Removed border */
   border-radius: var(--radius-md);
   overflow: hidden;
   position: relative;
-  transition: border-color 0.4s, transform 0.5s var(--ease-luxury);
+  transition: transform 0.5s var(--ease-luxury), box-shadow 0.4s;
   cursor: default;
+  text-align: center; /* Center aligned text */
 }
 
-.service-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  transform: scaleX(0);
-  transition: transform 0.5s var(--ease-luxury);
+.service-card.gold-card {
+  background: var(--gold);
+  color: #fff;
+}
+
+.service-card.gold-card h3,
+.service-card.gold-card p {
+  color: #fff;
 }
 
 .service-card:hover {
-  border-color: var(--border);
   transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
 }
-
-.service-card:hover::before { transform: scaleX(1); }
 
 .service-card-inner {
   padding: 2.5rem;
@@ -413,35 +435,46 @@
 .service-icon {
   width: 52px;
   height: 52px;
-  margin-bottom: 1.5rem;
+  margin: 0 auto 1.5rem auto; /* Centered icon */
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .service-icon::after {
   content: '';
   position: absolute;
   inset: -4px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--gold); /* Always gold border */
   border-radius: 50%;
-  transition: border-color 0.3s, transform 0.4s var(--ease-bounce);
+  transition: transform 0.4s var(--ease-bounce);
+}
+
+.service-card.gold-card .service-icon::after {
+  border-color: #fff; /* White border on gold card */
 }
 
 .service-card:hover .service-icon::after {
-  border-color: var(--gold);
   transform: scale(1.1);
 }
 
-.service-icon svg { width: 100%; height: 100%; }
+.service-icon svg { width: 60%; height: 60%; }
+
+.service-card.gold-card .service-icon svg path,
+.service-card.gold-card .service-icon svg circle,
+.service-card.gold-card .service-icon svg rect {
+  stroke: #fff; /* White icons on gold card */
+}
 
 .service-card h3 {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   margin-bottom: 0.75rem;
   transition: color 0.3s;
 }
 
-.service-card:hover h3 { color: var(--gold); }
-
-.service-card p { font-size: 0.82rem; line-height: 1.8; }
+.service-card p { font-size: 0.82rem; line-height: 1.8; color: var(--text-muted); }
+.service-card.gold-card p { color: rgba(255,255,255,0.9); }
 
 /* ============================================================
    SUITES CAROUSEL
@@ -646,11 +679,7 @@
   margin-bottom: 2rem;
 }
 
-.parallax-content-box .btn-primary {
-  /* Override global button for light background */
-  color: var(--bg);
-  box-shadow: none;
-}
+
 
 /* ============================================================
    TESTIMONIALS
@@ -814,6 +843,7 @@
   /* About */
   .about-list { gap: 0.6rem; }
   .about-list li { font-size: 0.8rem; }
+  .about-img-secondary { width: 140px; height: 160px; left: -1rem; bottom: -2rem; }
 
   /* Service cards */
   .service-card { padding: 1.8rem 1.5rem; }

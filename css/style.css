@@ -12,28 +12,28 @@
   --gold-dark:   #8b6914;
   --gold-muted:  rgba(201,168,76,0.15);
 
-  /* Dark Palette */
-  --bg:          #0a0a0b;
-  --bg-2:        #111114;
-  --bg-3:        #1a1a1f;
-  --bg-card:     rgba(255,255,255,0.04);
-  --bg-glass:    rgba(10,10,11,0.75);
+  /* Light Palace Palette (Formerly Dark) */
+  --bg:          #fdfcf8;
+  --bg-2:        #f5f2eb;
+  --bg-3:        #ebe6dc;
+  --bg-card:     rgba(0,0,0,0.03);
+  --bg-glass:    rgba(253, 252, 248, 0.85);
 
   /* Text */
-  --text-primary:   #f0ebe2;
-  --text-secondary: #9a9080;
-  --text-muted:     #5a5550;
+  --text-primary:   #2c2a26;
+  --text-secondary: #6b665c;
+  --text-muted:     #969085;
 
   /* Borders */
-  --border:      rgba(201,168,76,0.2);
-  --border-light:rgba(255,255,255,0.06);
+  --border:      rgba(201,168,76,0.3);
+  --border-light:rgba(0,0,0,0.08);
 
   /* Spacing */
   --space-xs:    0.5rem;
   --space-sm:    1rem;
   --space-md:    2rem;
   --space-lg:    4rem;
-  --space-xl:    8rem;
+  --space-xl:    5rem;
 
   /* Radius */
   --radius-sm:   6px;
@@ -162,17 +162,25 @@ p { color: var(--text-secondary); line-height: 1.8; }
   justify-content: space-between;
   padding: 0 clamp(1.5rem, 4vw, 5rem);
   transition: background 0.5s var(--ease-luxury), backdrop-filter 0.5s, height 0.4s, box-shadow 0.5s;
-  /* Subtle gradient from dark top so logo/links are always readable over the video */
-  background: linear-gradient(to bottom, rgba(10,10,11,0.72) 0%, rgba(10,10,11,0) 100%);
+  /* Darker gradient from top so logo/links are always readable over very bright images */
+  background: linear-gradient(to bottom, rgba(10,10,11,0.85) 0%, rgba(10,10,11,0.1) 100%);
 }
 
 .navbar.scrolled {
   height: 68px;
-  background: rgba(10,10,11,0.88);
+  background: rgba(253, 252, 248, 0.92);
   backdrop-filter: blur(24px) saturate(1.8);
   -webkit-backdrop-filter: blur(24px) saturate(1.8);
   border-bottom: 1px solid rgba(201,168,76,0.18);
-  box-shadow: 0 4px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 40px rgba(0,0,0,0.06);
+}
+
+.navbar.scrolled .nav-link {
+  color: var(--text-primary);
+}
+
+.navbar.scrolled .nav-link:hover {
+  color: var(--gold-dark);
 }
 
 .nav-logo {
@@ -217,6 +225,7 @@ p { color: var(--text-secondary); line-height: 1.8; }
   color: rgba(240,235,226,0.82);
   position: relative;
   transition: color 0.3s;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6); /* Force text to be readable over bright images */
 }
 
 .nav-link::after {
@@ -291,7 +300,7 @@ p { color: var(--text-secondary); line-height: 1.8; }
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--bg);
+  color: #111; /* Always dark text on gold buttons */
   background: linear-gradient(135deg, var(--gold-light), var(--gold));
   padding: 1rem 2.5rem;
   border-radius: 2px;
@@ -347,6 +356,15 @@ p { color: var(--text-secondary); line-height: 1.8; }
 }
 
 .btn-ghost.sm { padding: 0.5rem 1.2rem; font-size: 0.65rem; }
+
+.cta-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
 
 .btn-link {
   display: inline-flex;
@@ -481,7 +499,7 @@ section {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(10,10,11,0.5), var(--bg) 100%);
+  background: rgba(0, 0, 0, 0.15); /* Very subtle overlay, no heavy gradients */
 }
 
 .page-hero:hover .page-hero-bg { transform: scale(1.05); }

@@ -21,7 +21,7 @@
   background-size: cover;
   background-position: center;
   transition: transform 8s ease;
-  filter: brightness(0.5) saturate(0.8);
+  /* Removed brightness filter so the image shines in full glory */
 }
 
 .page-hero:hover .page-hero-bg { transform: scale(1.03); }
@@ -30,7 +30,8 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(10,10,11,0.3) 0%, rgba(10,10,11,0.6) 60%, var(--bg) 100%);
+  /* Very subtle overlay just to keep text readable, no muddy gradients */
+  background: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -66,7 +67,8 @@
 .page-hero-title {
   font-size: clamp(2.5rem, 6vw, 5.5rem);
   font-weight: 300;
-  color: var(--text-primary);
+  color: #fff; /* Force white text over the hero image */
+  text-shadow: 0 4px 20px rgba(0,0,0,0.4); /* Ensure readability */
 }
 
 /* ---- Inner Sections ---- */
@@ -257,129 +259,294 @@
 
 .accordion-body p { font-size: 0.88rem; line-height: 1.9; }
 
-/* ---- Suite Cards (suites.html) ---- */
+/* ---- Suites Page Layout ---- */
 .suites-section { padding: var(--space-xl) 0; background: var(--bg); }
 
-.suite-filters {
+/* Amenities Section */
+.amenities-container {
+  margin-bottom: 4rem;
+}
+.amenities-notice {
   display: flex;
   justify-content: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin: 2.5rem 0;
+  gap: 3rem;
+  margin-bottom: 2rem;
 }
-
-.filter-btn {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
-  background: none;
-  border: 1px solid var(--border-light);
-  padding: 0.6rem 1.4rem;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: all 0.35s;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-  border-color: var(--gold);
-  color: var(--gold);
-  background: var(--gold-muted);
-}
-
-.suites-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-.suite-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: border-color 0.4s, transform 0.6s var(--ease-luxury), box-shadow 0.5s;
-  cursor: pointer;
-}
-
-.suite-card:hover {
-  border-color: rgba(201,168,76,0.3);
-  transform: translateY(-10px);
-  box-shadow: 0 30px 80px rgba(0,0,0,0.4);
-}
-
-.suite-card-img {
-  width: 100%;
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.suite-card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.8s var(--ease-luxury);
-}
-
-.suite-card:hover .suite-card-img img { transform: scale(1.06); }
-
-.suite-card-img::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 60%;
-  background: linear-gradient(to top, rgba(10,10,11,0.7), transparent);
-}
-
-.suite-card-badge {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  background: var(--gold);
-  color: var(--bg);
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding: 0.35rem 0.85rem;
-  border-radius: 2px;
-  z-index: 2;
-}
-
-.suite-card-body {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.suite-card h3 { font-size: 1.75rem; }
-.suite-card p  { font-size: 0.83rem; }
-
-.suite-card-meta {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  padding-top: 0.75rem;
-  border-top: 1px solid var(--border-light);
-}
-
-.suite-meta-item {
+.amenities-notice strong {
+  color: #1e7025; /* green color */
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.72rem;
-  color: var(--text-secondary);
+}
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  height: 1px;
+  width: 50px;
+  background: var(--gold);
+}
+.section-divider span {
+  color: var(--text);
+  font-family: var(--font-heading);
 }
 
-.suite-meta-item svg { width: 14px; height: 14px; color: var(--gold); flex-shrink: 0; }
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.amenity-card {
+  background: #fcfcf9;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.amenity-card:hover {
+  transform: translateY(-5px);
+}
+.amenity-card.highlight {
+  background: #bea46b;
+  color: #fff;
+}
+.amenity-card.highlight h3,
+.amenity-card.highlight p {
+  color: #fff;
+}
+.amenity-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+}
+.amenity-card.highlight .amenity-icon {
+  border-color: #fff;
+}
+.amenity-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--gold);
+}
+.amenity-card.highlight .amenity-icon svg {
+  stroke: #fff;
+}
+.amenity-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.amenity-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .amenities-grid { grid-template-columns: repeat(2, 1fr); }
+  .amenities-notice { flex-direction: column; gap: 1rem; align-items: center; }
+}
+@media (max-width: 600px) {
+  .amenities-grid { grid-template-columns: 1fr; }
+}
+
+/* Suite Showcases */
+.suite-showcase {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  margin: 4rem 0;
+}
+.suite-showcase.reverse {
+  flex-direction: row-reverse;
+}
+.suite-showcase-visual {
+  flex: 1.2;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.suite-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  border-radius: 12px;
+  gap: 1rem;
+}
+.suite-carousel::-webkit-scrollbar {
+  display: none;
+}
+.suite-carousel img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+.carousel-controls {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.carousel-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text);
+  padding: 0;
+  transition: opacity 0.3s;
+}
+.carousel-btn:hover {
+  opacity: 0.6;
+}
+
+.suite-showcase-content {
+  flex: 1;
+}
+.suite-showcase-content h3 {
+  font-size: 2.5rem;
+  font-family: var(--font-heading);
+  margin-bottom: 1rem;
+}
+.suite-showcase-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+.btn-royal {
+  display: inline-block;
+  background-color: #272a74;
+  color: #fff;
+  padding: 0.8rem 2.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  transition: opacity 0.3s;
+}
+.btn-royal:hover { opacity: 0.9; }
+.btn-luxury {
+  display: inline-block;
+  background-color: #bea46b;
+  color: #fff;
+  padding: 0.8rem 2.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  transition: opacity 0.3s;
+}
+.btn-luxury:hover { opacity: 0.9; }
+
+.suite-feature-list {
+  background: #f7f7f7;
+  padding: 2rem;
+  border-radius: 8px;
+  list-style: none;
+  margin: 0;
+}
+.suite-feature-list li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-muted);
+}
+.suite-feature-list li:last-child {
+  margin-bottom: 0;
+}
+.check-icon {
+  background: #bea46b;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+.divider-line-full {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e5e5e5, transparent);
+  margin: 4rem 0;
+}
+
+@media (max-width: 900px) {
+  .suite-showcase, .suite-showcase.reverse {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
 
 /* ---- Gallery Grid ---- */
-.gallery-section { padding: var(--space-xl) 0; background: var(--bg); }
+.gallery-section { padding: var(--space-xl) 0; background: var(--bg); overflow: hidden; }
+
+/* ---- Gallery Marquee (Hero Background) ---- */
+.gallery-marquee-wrap.hero-marquee {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-dark);
+  z-index: 0;
+}
+
+.gallery-marquee-wrap.hero-marquee .gallery-marquee {
+  display: flex;
+  height: 100%;
+  width: max-content;
+  gap: 0;
+  animation: slideMarqueeHero 30s linear infinite;
+}
+
+.gallery-marquee-wrap.hero-marquee .gallery-marquee-img {
+  height: 100vh;
+  width: 50vw; /* Exact width so flex container knows its size */
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  filter: brightness(0.85); /* Reduced darkening so images are clearer */
+  flex-shrink: 0;
+}
+
+/* Optional gradient overlay to ensure menu/text readability */
+.gallery-marquee-wrap.hero-marquee::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10,10,11,0.7) 0%, rgba(10,10,11,0.2) 50%, rgba(10,10,11,0.5) 100%);
+  pointer-events: none;
+}
+
+@keyframes slideMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 1rem)); }
+}
+
+@keyframes slideMarqueeHero {
+  0% { transform: translateX(0); }
+  /* Slide exactly one set (3 images * 50vw = 150vw). Since there are 3 sets total, translating by 1 set is seamless. */
+  100% { transform: translateX(-150vw); }
+}
 
 .gallery-grid {
   columns: 3;

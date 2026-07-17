@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=2" />
-  <link rel="stylesheet" href="css/home.css?v=2" />
+  <link rel="stylesheet" href="css/style.css?v=7" />
+  <link rel="stylesheet" href="css/home.css?v=7" />
 </head>
 <body class="page-home">
 
@@ -18,7 +18,7 @@
     <div class="preloader-inner">
       <div class="preloader-logo">
         <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Cormorant Garamond" font-size="14" fill="#c9a84c" letter-spacing="4">JAYAMAHAL</text>
+          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Cormorant Garamond" font-size="14" font-weight="bold" fill="#c9a84c" letter-spacing="4">JAYAMAHAL</text>
           <text x="50%" y="70%" dominant-baseline="middle" text-anchor="middle" font-family="Montserrat" font-size="6" fill="#888" letter-spacing="6">PALACE</text>
         </svg>
       </div>
@@ -107,10 +107,11 @@
       <div class="about-grid">
         <div class="about-img-wrap">
           <div class="about-img-3d" id="aboutImg3d">
-            <div class="about-img-face front" style="background-image:url('ProductImages/Home/landing2.png.bv_resized_desktop.png.bv.webp')"></div>
+            <div class="about-img-face front" style="background-image:url('ProductImages/About/imgi_22_5-1.jpg.bv_resized_desktop.jpg.bv.webp')"></div>
             <div class="about-img-face side"></div>
             <div class="about-img-face top"></div>
           </div>
+          <div class="about-img-secondary reveal-up" style="background-image:url('ProductImages/About/imgi_30_17.jpg.bv.webp')"></div>
           <div class="about-img-badge">
             <span class="badge-num">1884</span>
             <span class="badge-label">Est.</span>
@@ -138,58 +139,99 @@
       <p class="section-eyebrow text-center reveal-up">Why Choose Us</p>
       <h2 class="section-title text-center reveal-up">Tailored Services <em>For Every Guest</em></h2>
       <div class="services-grid">
-        <div class="service-card reveal-card" data-delay="0">
+        <!-- Card 1 (Gold) -->
+        <div class="service-card gold-card reveal-card" data-delay="0">
           <div class="service-card-inner">
             <div class="service-icon">
-              <svg viewBox="0 0 40 40"><path d="M20 4L36 14V26L20 36L4 26V14L20 4Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/><circle cx="20" cy="20" r="5" fill="#c9a84c" opacity="0.5"/></svg>
+              <!-- Swimmer/Pool Icon -->
+              <svg viewBox="0 0 40 40"><path d="M10 26 Q 15 22 20 26 T 30 26" stroke="#fff" stroke-width="2" fill="none"/><path d="M10 32 Q 15 28 20 32 T 30 32" stroke="#fff" stroke-width="2" fill="none"/><circle cx="20" cy="14" r="5" stroke="#fff" stroke-width="2" fill="none"/></svg>
             </div>
-            <h3>Heritage Stay</h3>
-            <p>Palace rooms and suites that blend 19th-century architecture with modern amenities for an unparalleled stay.</p>
+            <h3>Swimming Pool</h3>
+            <p>Enjoy a refreshing dip in our outdoor swimming pool, set amidst lush gardens for a tranquil escape.</p>
           </div>
         </div>
+
+        <!-- Card 2 -->
         <div class="service-card reveal-card" data-delay="100">
           <div class="service-card-inner">
             <div class="service-icon">
-              <svg viewBox="0 0 40 40"><rect x="5" y="10" width="30" height="20" rx="3" stroke="#c9a84c" stroke-width="1.5" fill="none"/><path d="M5 16H35M12 10V16M28 10V16" stroke="#c9a84c" stroke-width="1.5"/></svg>
+              <!-- Gym Icon -->
+              <svg viewBox="0 0 40 40"><rect x="6" y="16" width="6" height="8" stroke="#c9a84c" stroke-width="1.5" fill="none"/><rect x="28" y="16" width="6" height="8" stroke="#c9a84c" stroke-width="1.5" fill="none"/><path d="M12 20 L28 20" stroke="#c9a84c" stroke-width="2"/></svg>
             </div>
-            <h3>Event Hosting</h3>
-            <p>From royal weddings to corporate galas — 44,000 sq.ft of curated event spaces await your vision.</p>
+            <h3>Gym</h3>
+            <p>Stay fit and active at our state-of-the-art fitness center, equipped with the latest exercise machines and free weights</p>
           </div>
         </div>
+
+        <!-- Card 3 -->
         <div class="service-card reveal-card" data-delay="200">
           <div class="service-card-inner">
             <div class="service-icon">
-              <svg viewBox="0 0 40 40"><path d="M20 8 C12 8 8 14 8 20 C8 28 20 36 20 36 C20 36 32 28 32 20 C32 14 28 8 20 8Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/><circle cx="20" cy="20" r="4" fill="#c9a84c" opacity="0.6"/></svg>
+              <!-- Restaurant Icon -->
+              <svg viewBox="0 0 40 40"><path d="M14 10 V20 M10 10 C10 15 14 20 14 20 M18 10 C18 15 14 20 14 20 M14 20 V32" stroke="#c9a84c" stroke-width="1.5" fill="none"/><path d="M26 10 V32 M26 10 C29 10 29 15 26 20" stroke="#c9a84c" stroke-width="1.5" fill="none"/></svg>
             </div>
-            <h3>Garden & Lawns</h3>
-            <p>Lush manicured gardens stretching across 19 acres — nature's backdrop for every occasion.</p>
+            <h3>Gallops Restaurant (Pure Veg)</h3>
+            <p>Experience a dining delight at Gallops restaurant, where we serve the most exotic pure vegetarian food.</p>
           </div>
         </div>
+
+        <!-- Card 4 -->
         <div class="service-card reveal-card" data-delay="300">
           <div class="service-card-inner">
             <div class="service-icon">
-              <svg viewBox="0 0 40 40"><path d="M8 32 L8 18 L20 8 L32 18 L32 32 Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/><path d="M16 32V24H24V32" stroke="#c9a84c" stroke-width="1.5"/></svg>
+              <!-- Lawn/Parking Icon -->
+              <svg viewBox="0 0 40 40"><path d="M20 10 L30 20 L26 20 L32 30 L8 30 L14 20 L10 20 Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/><path d="M18 30 V36 M22 30 V36" stroke="#c9a84c" stroke-width="1.5"/></svg>
             </div>
-            <h3>Venues</h3>
-            <p>Multiple indoor and outdoor venues, each offering a distinct character for weddings, conferences and product launches.</p>
+            <h3>Lawn Area with Parking</h3>
+            <p>A well-maintained lawn area is the green heart of any outdoor space, offering a refreshing and serene retreat</p>
           </div>
         </div>
-        <div class="service-card reveal-card" data-delay="400">
+
+        <!-- Card 5 -->
+        <div class="service-card reveal-card" data-delay="0">
           <div class="service-card-inner">
             <div class="service-icon">
-              <svg viewBox="0 0 40 40"><circle cx="20" cy="14" r="6" stroke="#c9a84c" stroke-width="1.5" fill="none"/><path d="M8 34 C8 26 32 26 32 34" stroke="#c9a84c" stroke-width="1.5" fill="none"/></svg>
+              <!-- Comfort/Style Icon (Diamond/Sparkle) -->
+              <svg viewBox="0 0 40 40"><path d="M20 8 L24 16 L32 20 L24 24 L20 32 L16 24 L8 20 L16 16 Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/></svg>
             </div>
-            <h3>Dedicated Host</h3>
-            <p>A personal Wedding Consultant and Event Host dedicated to making your vision a flawless reality.</p>
+            <h3>Where Comfort Meets Style</h3>
+            <p>Your complete stay experience designed for unparalleled relaxation and modern elegance.</p>
           </div>
         </div>
-        <div class="service-card reveal-card" data-delay="500">
+
+        <!-- Card 6 -->
+        <div class="service-card reveal-card" data-delay="100">
           <div class="service-card-inner">
             <div class="service-icon">
-              <svg viewBox="0 0 40 40"><path d="M20 6 L22 14 L30 14 L24 19 L26 28 L20 23 L14 28 L16 19 L10 14 L18 14 Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/></svg>
+              <!-- Business Icon -->
+              <svg viewBox="0 0 40 40"><rect x="8" y="16" width="24" height="16" rx="2" stroke="#c9a84c" stroke-width="1.5" fill="none"/><path d="M16 16 V12 C16 10 24 10 24 12 V16" stroke="#c9a84c" stroke-width="1.5" fill="none"/><circle cx="20" cy="24" r="2" stroke="#c9a84c" stroke-width="1.5" fill="none"/></svg>
             </div>
-            <h3>Luxury Dining</h3>
-            <p>Curated menus celebrating Bangalore's culinary heritage, from traditional spreads to contemporary fine dining.</p>
+            <h3>Business Centre</h3>
+            <p>High-speed WiFi throughout the property. Meeting rooms and conference facilities for all your corporate needs.</p>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="service-card reveal-card" data-delay="200">
+          <div class="service-card-inner">
+            <div class="service-icon">
+              <!-- Garden/Leaf Icon -->
+              <svg viewBox="0 0 40 40"><path d="M20 34 C20 34 8 26 8 16 C8 10 14 6 20 12 C26 6 32 10 32 16 C32 26 20 34 20 34 Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/></svg>
+            </div>
+            <h3>Lawn & Gardens</h3>
+            <p>19 acres of meticulously maintained heritage gardens, offering the perfect backdrop for morning walks.</p>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="service-card reveal-card" data-delay="300">
+          <div class="service-card-inner">
+            <div class="service-icon">
+              <!-- Enjoy/Bed Icon -->
+              <svg viewBox="0 0 40 40"><path d="M8 26 L32 26 M8 26 V18 C8 16 10 16 12 16 H28 C30 16 32 16 32 18 V32 M8 26 V32 M12 26 V30 M28 26 V30" stroke="#c9a84c" stroke-width="1.5" fill="none"/><rect x="14" y="10" width="12" height="6" rx="2" stroke="#c9a84c" stroke-width="1.5" fill="none"/></svg>
+            </div>
+            <h3>Enjoy Every Moment</h3>
+            <p>Enjoy every second of your luxurious stay with our dedicated 24/7 room service and personalized care.</p>
           </div>
         </div>
       </div>

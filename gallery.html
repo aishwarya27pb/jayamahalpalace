@@ -6,7 +6,7 @@
   <meta name="description" content="Explore the visual grandeur of Jayamahal Palace through our gallery of heritage architecture, lush gardens, events and royal suites." />
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" /><link rel="stylesheet" href="css/inner.css" />
+  <link rel="stylesheet" href="css/style.css?v=13" /><link rel="stylesheet" href="css/inner.css?v=13" />
 </head>
 <body class="page-gallery">
   <div id="preloader"><div class="preloader-inner"><div class="preloader-logo"><svg viewBox="0 0 120 80"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Cormorant Garamond" font-size="14" fill="#c9a84c" letter-spacing="4">JAYAMAHAL</text><text x="50%" y="70%" dominant-baseline="middle" text-anchor="middle" font-family="Montserrat" font-size="6" fill="#888" letter-spacing="6">PALACE</text></svg></div><div class="preloader-bar"><div class="preloader-fill"></div></div></div></div>
@@ -18,7 +18,24 @@
   </nav>
 
   <section class="page-hero">
-    <div class="page-hero-bg" style="background-image:url('https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg')"></div>
+    <div class="gallery-marquee-wrap hero-marquee">
+      <div class="gallery-marquee">
+        <!-- First set -->
+        <img src="ProductImages/Gallery/gallery1.jpeg" class="gallery-marquee-img" alt="Gallery Image 1" />
+        <img src="ProductImages/Gallery/gallery2.jpeg" class="gallery-marquee-img" alt="Gallery Image 2" />
+        <img src="ProductImages/Gallery/gallery3.jpeg" class="gallery-marquee-img" alt="Gallery Image 3" />
+        
+        <!-- Second set for seamless looping -->
+        <img src="ProductImages/Gallery/gallery1.jpeg" class="gallery-marquee-img" alt="Gallery Image 1" />
+        <img src="ProductImages/Gallery/gallery2.jpeg" class="gallery-marquee-img" alt="Gallery Image 2" />
+        <img src="ProductImages/Gallery/gallery3.jpeg" class="gallery-marquee-img" alt="Gallery Image 3" />
+        
+        <!-- Third set for ultra-wide screens -->
+        <img src="ProductImages/Gallery/gallery1.jpeg" class="gallery-marquee-img" alt="Gallery Image 1" />
+        <img src="ProductImages/Gallery/gallery2.jpeg" class="gallery-marquee-img" alt="Gallery Image 2" />
+        <img src="ProductImages/Gallery/gallery3.jpeg" class="gallery-marquee-img" alt="Gallery Image 3" />
+      </div>
+    </div>
     <div class="page-hero-content">
       <p class="page-hero-sub reveal-up">Visual Journey</p>
       <h1 class="page-hero-title reveal-up">Our <em>Gallery</em></h1>
@@ -37,54 +54,55 @@
         <button class="filter-btn" data-filter="gardens">Gardens</button>
         <button class="filter-btn" data-filter="rooms">Rooms</button>
       </div>
+
       <div class="gallery-grid">
         <!-- All gallery items link to the palace images -->
-        <div class="gallery-item reveal-card" data-category="palace" data-delay="0" data-src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg">
-          <img src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg" alt="Jayamahal Palace Exterior" loading="lazy" />
+        <div class="gallery-item reveal-card" data-category="palace" data-delay="0" data-src="ProductImages/Gallery/imgi_49_5-1-1.jpg.bv_resized_desktop.jpg.bv.webp">
+          <img src="ProductImages/Gallery/imgi_49_5-1-1.jpg.bv_resized_desktop.jpg.bv.webp" alt="Jayamahal Palace Exterior" loading="lazy" />
           <div class="gallery-item-overlay"><span>+</span></div>
         </div>
-        <div class="gallery-item reveal-card" data-category="gardens" data-delay="50" data-src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg">
-          <img src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg" alt="Palace Gardens" loading="lazy" style="height:280px;object-fit:cover;" />
+        <div class="gallery-item reveal-card" data-category="gardens" data-delay="50" data-src="ProductImages/Gallery/IMG-20241023-WA0008.jpg">
+          <img src="ProductImages/Gallery/IMG-20241023-WA0008.jpg" alt="Palace Gardens" loading="lazy" style="height:280px;object-fit:cover;" />
           <div class="gallery-item-overlay"><span>+</span></div>
         </div>
-        <div class="gallery-item reveal-card" data-category="events" data-delay="100" data-src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg">
-          <img src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg" alt="Grand Event" loading="lazy" style="height:200px;object-fit:cover;" />
+        <div class="gallery-item reveal-card" data-category="events" data-delay="100" data-src="ProductImages/Gallery/imgi_135_IMG-20240817-WA0017.jpg">
+          <img src="ProductImages/Gallery/imgi_135_IMG-20240817-WA0017.jpg" alt="Grand Event" loading="lazy" style="height:200px;object-fit:cover;" />
           <div class="gallery-item-overlay"><span>+</span></div>
         </div>
-        <div class="gallery-item reveal-card" data-category="rooms" data-delay="150" data-src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg">
-          <img src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg" alt="Heritage Suite" loading="lazy" style="height:250px;object-fit:cover;" />
+        <div class="gallery-item reveal-card" data-category="rooms" data-delay="150" data-src="ProductImages/Gallery/imgi_48_3-3-1.jpg">
+          <img src="ProductImages/Gallery/imgi_48_3-3-1.jpg" alt="Heritage Suite" loading="lazy" style="height:250px;object-fit:cover;" />
           <div class="gallery-item-overlay"><span>+</span></div>
         </div>
-        <div class="gallery-item reveal-card" data-category="palace" data-delay="200" data-src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg">
-          <img src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg" alt="Palace Facade" loading="lazy" style="height:320px;object-fit:cover;" />
+        <div class="gallery-item reveal-card" data-category="palace" data-delay="200" data-src="ProductImages/Gallery/imgi_28_1-1-1.jpg">
+          <img src="ProductImages/Gallery/imgi_28_1-1-1.jpg" alt="Palace Facade" loading="lazy" style="height:320px;object-fit:cover;" />
           <div class="gallery-item-overlay"><span>+</span></div>
         </div>
-        <div class="gallery-item reveal-card" data-category="events" data-delay="250" data-src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg">
-          <img src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg" alt="Wedding Event" loading="lazy" style="height:240px;object-fit:cover;" />
+        <div class="gallery-item reveal-card" data-category="events" data-delay="250" data-src="ProductImages/Gallery/14-scaled-1.jpg">
+          <img src="ProductImages/Gallery/14-scaled-1.jpg" alt="Wedding Event" loading="lazy" style="height:240px;object-fit:cover;" />
           <div class="gallery-item-overlay"><span>+</span></div>
         </div>
-        <div class="gallery-item reveal-card" data-category="gardens" data-delay="300" data-src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg">
-          <img src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg" alt="Lawns" loading="lazy" style="height:300px;object-fit:cover;" />
+        <div class="gallery-item reveal-card" data-category="gardens" data-delay="300" data-src="ProductImages/Gallery/imgi_30_17.jpg.bv.webp">
+          <img src="ProductImages/Gallery/imgi_30_17.jpg.bv.webp" alt="Lawns" loading="lazy" style="height:300px;object-fit:cover;" />
           <div class="gallery-item-overlay"><span>+</span></div>
         </div>
-        <div class="gallery-item reveal-card" data-category="palace" data-delay="350" data-src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg">
-          <img src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg" alt="Palace Corridor" loading="lazy" style="height:200px;object-fit:cover;" />
+        <div class="gallery-item reveal-card" data-category="palace" data-delay="350" data-src="ProductImages/Gallery/imgi_30_3-2.jpg">
+          <img src="ProductImages/Gallery/imgi_30_3-2.jpg" alt="Palace Corridor" loading="lazy" style="height:200px;object-fit:cover;" />
           <div class="gallery-item-overlay"><span>+</span></div>
         </div>
-        <div class="gallery-item reveal-card" data-category="rooms" data-delay="400" data-src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg">
-          <img src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg" alt="Palace Room" loading="lazy" style="height:360px;object-fit:cover;" />
+        <div class="gallery-item reveal-card" data-category="rooms" data-delay="400" data-src="ProductImages/Gallery/imgi_32_2.jpg">
+          <img src="ProductImages/Gallery/imgi_32_2.jpg" alt="Palace Room" loading="lazy" style="height:360px;object-fit:cover;" />
           <div class="gallery-item-overlay"><span>+</span></div>
         </div>
-        <div class="gallery-item reveal-card" data-category="events" data-delay="450" data-src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg">
-          <img src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg" alt="Ballroom" loading="lazy" style="height:260px;object-fit:cover;" />
+        <div class="gallery-item reveal-card" data-category="events" data-delay="450" data-src="ProductImages/Gallery/imgi_36_6-2-1.jpg">
+          <img src="ProductImages/Gallery/imgi_36_6-2-1.jpg" alt="Ballroom" loading="lazy" style="height:260px;object-fit:cover;" />
           <div class="gallery-item-overlay"><span>+</span></div>
         </div>
-        <div class="gallery-item reveal-card" data-category="gardens" data-delay="500" data-src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg">
-          <img src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg" alt="Garden Path" loading="lazy" style="height:220px;object-fit:cover;" />
+        <div class="gallery-item reveal-card" data-category="gardens" data-delay="500" data-src="ProductImages/Gallery/imgi_37_5-3.jpg">
+          <img src="ProductImages/Gallery/imgi_37_5-3.jpg" alt="Garden Path" loading="lazy" style="height:220px;object-fit:cover;" />
           <div class="gallery-item-overlay"><span>+</span></div>
         </div>
-        <div class="gallery-item reveal-card" data-category="palace" data-delay="550" data-src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg">
-          <img src="https://jayamahalpalace.com/wp-content/uploads/2024/08/DSC_0543.jpg" alt="Palace Entrance" loading="lazy" style="height:280px;object-fit:cover;" />
+        <div class="gallery-item reveal-card" data-category="palace" data-delay="550" data-src="ProductImages/Gallery/imgi_38_1-5.jpg">
+          <img src="ProductImages/Gallery/imgi_38_1-5.jpg" alt="Palace Entrance" loading="lazy" style="height:280px;object-fit:cover;" />
           <div class="gallery-item-overlay"><span>+</span></div>
         </div>
       </div>
@@ -113,6 +131,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="js/utils.js"></script><script src="js/animations.js"></script><script src="js/inner.js"></script><script src="js/main.js"></script>
+  <script src="js/utils.js?v=13"></script><script src="js/animations.js?v=13"></script><script src="js/inner.js?v=13"></script><script src="js/main.js?v=13"></script>
 </body>
 </html>

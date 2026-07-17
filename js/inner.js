@@ -57,7 +57,7 @@
     const camera = new THREE.PerspectiveCamera(60, canvas.parentElement.offsetWidth / canvas.parentElement.offsetHeight, 0.1, 500);
     camera.position.z = 30;
 
-    const count = 600;
+    const count = 200;
     const pos   = new Float32Array(count * 3);
     const col   = new Float32Array(count * 3);
     const goldC = new THREE.Color(0xc9a84c);
@@ -76,7 +76,7 @@
     geom.setAttribute('color',    new THREE.BufferAttribute(col, 3));
 
     const mat = new THREE.PointsMaterial({
-      size: 0.4, vertexColors: true, transparent: true, opacity: 0.5,
+      size: 0.15, vertexColors: true, transparent: true, opacity: 0.4,
       blending: THREE.AdditiveBlending, depthWrite: false,
     });
 
@@ -152,6 +152,26 @@
     });
   }
 
+  /* ---------- Suite Carousels ---------- */
+  function initSuiteCarousels() {
+    document.querySelectorAll('.carousel-controls').forEach(controls => {
+      const prevBtn = controls.querySelector('.prev');
+      const nextBtn = controls.querySelector('.next');
+      if (!prevBtn || !nextBtn) return;
+      
+      const targetId = prevBtn.getAttribute('data-target');
+      const carousel = document.querySelector(targetId);
+      if (!carousel) return;
+      
+      prevBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -300, behavior: 'smooth' });
+      });
+      nextBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: 300, behavior: 'smooth' });
+      });
+    });
+  }
+
   /* ---------- Boot ---------- */
   document.addEventListener('DOMContentLoaded', () => {
     initAccordion();
@@ -160,6 +180,7 @@
     initSuiteCards3D();
     initVenueItemParallax();
     initCards3DHover();
+    initSuiteCarousels();
   });
 
 })();
