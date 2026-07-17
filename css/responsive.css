@@ -80,11 +80,15 @@
   }
 
   /* Drawer navigation links styling override to keep visible on mobile dark drawer background */
-  .nav-links .nav-link {
+  .navbar .nav-links .nav-link,
+  .navbar.scrolled .nav-links .nav-link,
+  .navbar.scrolled .nav-link {
     color: rgba(240, 235, 226, 0.75) !important;
   }
-  .nav-links .nav-link:hover,
-  .nav-links .nav-link.active {
+  .navbar .nav-links .nav-link:hover,
+  .navbar.scrolled .nav-links .nav-link:hover,
+  .navbar .nav-links .nav-link.active,
+  .navbar.scrolled .nav-links .nav-link.active {
     color: var(--gold) !important;
   }
 
