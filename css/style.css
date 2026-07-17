@@ -288,6 +288,10 @@ p { color: var(--text-secondary); line-height: 1.8; }
   transition: transform 0.35s, opacity 0.35s;
 }
 
+.nav-link-book-mobile {
+  display: none;
+}
+
 /* ============================================================
    BUTTONS
    ============================================================ */
@@ -718,8 +722,7 @@ section {
   .nav-link::after { display: none; }
 
   /* Book Now button inside drawer */
-  .nav-links::after {
-    content: 'Book Now';
+  .nav-link-book-mobile {
     display: block;
     margin-top: 2rem;
     font-family: 'Montserrat', sans-serif;
@@ -727,12 +730,13 @@ section {
     font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: #0a0a0b;
+    color: #0a0a0b !important;
     background: linear-gradient(135deg, #e8cc80, #c9a84c);
     padding: 0.9rem 2rem;
     border-radius: 2px;
     text-align: center;
     cursor: pointer;
+    width: 100%;
   }
 
   /* Logo stays readable */

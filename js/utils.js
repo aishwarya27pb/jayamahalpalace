@@ -72,6 +72,16 @@ function initNavbar() {
   /* ---------- Mobile drawer ---------- */
   if (!hamburger || !navLinks) return;
 
+  // Dynamically inject a real link for Book Now button inside mobile navigation to make it clickable
+  if (!document.querySelector('.nav-link-book-mobile')) {
+    const bookBtn = document.createElement('a');
+    bookBtn.href = 'contact.html#book';
+    bookBtn.className = 'nav-link-book-mobile';
+    bookBtn.textContent = 'Book Now';
+    bookBtn.addEventListener('click', closeDrawer);
+    navLinks.appendChild(bookBtn);
+  }
+
   /* Inject backdrop once */
   let backdrop = document.querySelector('.nav-backdrop');
   if (!backdrop) {
