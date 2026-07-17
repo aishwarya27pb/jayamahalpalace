@@ -73,11 +73,36 @@
 
   .container { padding: 0 1.5rem; }
 
-  /* Hamburger menu — show */
-  .nav-hamburger { display: flex; }
+  /* Hamburger menu — show and center align spans */
+  .nav-hamburger {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+  }
   .nav-hamburger span {
     background: var(--gold) !important;
+    width: 24px !important;
+    height: 2px !important;
     transform-origin: center !important;
+    transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease !important;
+  }
+  .nav-hamburger span:nth-child(1) { width: 24px !important; }
+  .nav-hamburger span:nth-child(2) { width: 18px !important; }
+  .nav-hamburger span:nth-child(3) { width: 24px !important; }
+
+  /* Perfect cross mark (X) transition */
+  .nav-hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(-45deg) !important;
+    width: 24px !important;
+  }
+  .nav-hamburger.open span:nth-child(2) {
+    opacity: 0 !important;
+    width: 0 !important;
+  }
+  .nav-hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(45deg) !important;
+    width: 24px !important;
   }
 
   /* Drawer navigation links styling override to keep visible on mobile dark drawer background */
